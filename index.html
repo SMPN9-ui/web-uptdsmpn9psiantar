@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website Resmi UPTD SMP Negeri 9 Pematangsiantar. Sekolah berprestasi, berkarakter, dan unggul dalam pelayanan pendidikan di Pematangsiantar.">
+    <meta name="keywords" content="SMP Negeri 9 Pematangsiantar, SMPN 9 Siantar, Sekolah Siantar, Pendidikan Pematangsiantar, PPDB SMP 9">
+    <meta name="author" content="UPTD SMP Negeri 9 Pematangsiantar">
+    
+    <!-- Title SEO Friendly -->
+    <title>UPTD SMP Negeri 9 Pematangsiantar - Berprestasi & Berkarakter</title>
+
+    <!-- Tailwind CSS (Framework untuk styling cepat dan responsif) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e3a8a', // Biru SMP
+                        secondary: '#fbbf24', // Kuning Emas
+                        accent: '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for smoothness */
+        .hero-pattern {
+            background-color: #1e3a8a;
+            background-image: url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+            background-blend-mode: multiply;
+            background-size: cover;
+            background-position: center;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- TOP BAR (Informasi Kontak Cepat) -->
+    <div class="bg-primary text-white py-2 text-sm hidden md:block">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <span class="flex items-center gap-1"><i data-lucide="map-pin" class="w-4 h-4"></i> Pematangsiantar, Sumatera Utara</span>
+                <span class="flex items-center gap-1"><i data-lucide="phone" class="w-4 h-4"></i> (0622) 123456</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="hover:text-secondary transition">Siswa</a>
+                <a href="#" class="hover:text-secondary transition">Guru</a>
+                <a href="#" class="hover:text-secondary transition">Alumni</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo Sekolah -->
+                <a href="#" class="flex items-center gap-3">
+                    <!-- Placeholder Logo Tut Wuri Handayani -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Logo_Tut_Wuri_Handayani.png" alt="Logo Tut Wuri Handayani" class="h-10 w-10">
+                    <div>
+                        <h1 class="font-bold text-primary text-lg leading-tight">UPTD SMP NEGERI 9</h1>
+                        <p class="text-xs text-gray-500 font-medium tracking-wider">PEMATANGSIANTAR</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 font-medium text-gray-700">
+                    <a href="#beranda" class="hover:text-primary transition">Beranda</a>
+                    <a href="#profil" class="hover:text-primary transition">Profil</a>
+                    <a href="#akademik" class="hover:text-primary transition">Akademik</a>
+                    <a href="#berita" class="hover:text-primary transition">Berita</a>
+                    <a href="#galeri" class="hover:text-primary transition">Galeri</a>
+                    <a href="#kontak" class="hover:text-primary transition">Kontak</a>
+                    <a href="#ppdb" class="bg-primary text-white px-5 py-2 rounded-full hover:bg-blue-800 transition shadow-lg text-sm">PPDB Online</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none">
+                    <i data-lucide="menu" class="w-8 h-8"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 p-4 space-y-3 shadow-lg">
+            <a href="#beranda" class="block text-gray-700 hover:text-primary">Beranda</a>
+            <a href="#profil" class="block text-gray-700 hover:text-primary">Profil</a>
+            <a href="#akademik" class="block text-gray-700 hover:text-primary">Akademik</a>
+            <a href="#berita" class="block text-gray-700 hover:text-primary">Berita</a>
+            <a href="#galeri" class="block text-gray-700 hover:text-primary">Galeri</a>
+            <a href="#kontak" class="block text-gray-700 hover:text-primary">Kontak</a>
+            <a href="#ppdb" class="block text-center bg-primary text-white py-2 rounded">PPDB Online</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="hero-pattern h-[600px] flex items-center relative text-white">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="container mx-auto px-4 relative z-10 text-center md:text-left">
+            <div class="md:w-2/3">
+                <span class="inline-block py-1 px-3 rounded bg-secondary text-primary font-bold text-xs mb-4">AKREDITASI A</span>
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Mewujudkan Generasi Cerdas, Berkarakter & Berbudaya</h2>
+                <p class="text-lg md:text-xl mb-8 text-gray-200">Selamat datang di website resmi UPTD SMP Negeri 9 Pematangsiantar. Media informasi dan komunikasi digital bagi warga sekolah dan masyarakat.</p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#profil" class="bg-secondary text-primary font-bold px-8 py-3 rounded hover:bg-yellow-400 transition shadow-lg">Tentang Sekolah</a>
+                    <a href="#kontak" class="border-2 border-white text-white font-bold px-8 py-3 rounded hover:bg-white hover:text-primary transition">Hubungi Kami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFO BOXES -->
+    <section class="relative z-20 -mt-16 container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-xl border-t-4 border-primary text-center card-hover">
+                <div class="bg-blue-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
+                    <i data-lucide="book-open" class="w-8 h-8"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-2">Kurikulum Merdeka</h3>
+                <p class="text-gray-600 text-sm">Penerapan pembelajaran yang berpusat pada peserta didik dan pengembangan karakter.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-xl border-t-4 border-secondary text-center card-hover">
+                <div class="bg-yellow-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-secondary">
+                    <i data-lucide="trophy" class="w-8 h-8"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-2">Prestasi Siswa</h3>
+                <p class="text-gray-600 text-sm">Mencetak prestasi gemilang di bidang akademik maupun non-akademik tingkat kota hingga nasional.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-xl border-t-4 border-green-500 text-center card-hover">
+                <div class="bg-green-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-green-600">
+                    <i data-lucide="users" class="w-8 h-8"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-2">Ekstrakurikuler</h3>
+                <p class="text-gray-600 text-sm">Beragam kegiatan pengembangan diri seperti Pramuka, Paskibra, Olahraga, dan Seni.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAMBUTAN KEPALA SEKOLAH -->
+    <section id="profil" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 relative">
+                    <div class="absolute top-4 -left-4 w-full h-full border-4 border-secondary rounded-lg z-0"></div>
+                    <!-- Placeholder Kepala Sekolah Image -->
+                    <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kepala Sekolah" class="relative z-10 rounded-lg shadow-lg w-full object-cover h-[400px]">
+                </div>
+                <div class="md:w-1/2">
+                    <h4 class="text-primary font-bold uppercase tracking-wide mb-2">Sambutan Kepala Sekolah</h4>
+                    <h2 class="text-3xl font-bold mb-6 text-gray-900">Membangun Karakter, Mengukir Prestasi</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Assalamu'alaikum Warahmatullahi Wabarakatuh,<br><br>
+                        Puji syukur kita panjatkan ke hadirat Tuhan Yang Maha Esa. Website ini hadir sebagai wujud transparansi dan pelayanan informasi UPTD SMP Negeri 9 Pematangsiantar kepada masyarakat.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Di era digital ini, kami berkomitmen untuk terus berinovasi dalam pembelajaran dan manajemen sekolah. Kami mengajak seluruh warga sekolah dan orang tua untuk bersinergi memajukan pendidikan putra-putri kita.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div>
+                            <p class="font-bold text-lg text-primary">Nama Kepala Sekolah, S.Pd., M.Pd.</p>
+                            <p class="text-sm text-gray-500">Kepala UPTD SMPN 9 Pematangsiantar</p>
+                        </div>
+                        <!-- Placeholder Tanda Tangan -->
+                        <!-- <img src="" alt="Tanda Tangan" class="h-10 opacity-50"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BERITA TERBARU (Update Berkala) -->
+    <section id="berita" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">Berita & Pengumuman</h2>
+                <p class="text-gray-500 mt-2">Informasi terkini seputar kegiatan sekolah</p>
+                <div class="w-20 h-1 bg-secondary mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Artikel 1 -->
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition flex flex-col h-full">
+                    <img src="https://images.unsplash.com/photo-1427504746696-ea5abd7dfe5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kegiatan Upacara" class="h-48 w-full object-cover">
+                    <div class="p-6 flex-grow">
+                        <span class="text-xs font-bold text-primary bg-blue-100 px-2 py-1 rounded">Kegiatan</span>
+                        <h3 class="text-xl font-bold mt-2 mb-2 hover:text-primary transition"><a href="#">Peringatan Hari Guru Nasional di SMPN 9</a></h3>
+                        <p class="text-gray-600 text-sm line-clamp-3">
+                            Seluruh siswa dan guru mengikuti upacara bendera dengan khidmat dalam rangka memperingati Hari Guru Nasional.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+                        <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3 h-3"></i> 25 Nov 2025</span>
+                        <a href="#" class="text-primary font-bold">Baca Selengkapnya &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Artikel 2 -->
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition flex flex-col h-full">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="PPDB" class="h-48 w-full object-cover">
+                    <div class="p-6 flex-grow">
+                        <span class="text-xs font-bold text-secondary bg-yellow-100 px-2 py-1 rounded">Pengumuman</span>
+                        <h3 class="text-xl font-bold mt-2 mb-2 hover:text-primary transition"><a href="#">Informasi PPDB Tahun Ajaran 2026/2027</a></h3>
+                        <p class="text-gray-600 text-sm line-clamp-3">
+                            Penerimaan Peserta Didik Baru (PPDB) akan segera dibuka. Simak persyaratan dan jadwal lengkapnya di sini.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+                        <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3 h-3"></i> 15 Jan 2026</span>
+                        <a href="#" class="text-primary font-bold">Baca Selengkapnya &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Artikel 3 -->
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition flex flex-col h-full">
+                    <img src="https://images.unsplash.com/photo-1564951434112-64d74cc2a2d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Prestasi" class="h-48 w-full object-cover">
+                    <div class="p-6 flex-grow">
+                        <span class="text-xs font-bold text-green-600 bg-green-100 px-2 py-1 rounded">Prestasi</span>
+                        <h3 class="text-xl font-bold mt-2 mb-2 hover:text-primary transition"><a href="#">Siswa SMPN 9 Raih Juara 1 Olimpiade Sains</a></h3>
+                        <p class="text-gray-600 text-sm line-clamp-3">
+                            Selamat kepada ananda Budi Santoso yang telah berhasil mengharumkan nama sekolah di tingkat Provinsi.
+                        </p>
+                    </div>
+                    <div class="px-6 py-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+                        <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3 h-3"></i> 10 Jan 2026</span>
+                        <a href="#" class="text-primary font-bold">Baca Selengkapnya &rarr;</a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#" class="inline-block border border-primary text-primary px-6 py-2 rounded-full hover:bg-primary hover:text-white transition">Lihat Semua Berita</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERI FOTO -->
+    <section id="galeri" class="py-20 bg-primary text-white relative overflow-hidden">
+        <!-- Decoration BG -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-blue-800 rounded-full opacity-50"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-blue-800 rounded-full opacity-50"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">Galeri Sekolah</h2>
+                <p class="text-blue-200 mt-2">Dokumentasi kegiatan dan fasilitas sekolah</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-lg h-48 group">
+                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kelas" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg h-48 group">
+                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Perpustakaan" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg h-48 group">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Lab Komputer" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg h-48 group">
+                    <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Halaman Sekolah" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK & PETA (LOKASI DARI LINK MAPS) -->
+    <section id="kontak" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Info Kontak -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Hubungi Kami</h2>
+                    <p class="text-gray-600 mb-8">
+                        Silakan hubungi kami untuk informasi lebih lanjut mengenai pendaftaran, akademik, atau hal lainnya.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-50 p-3 rounded-full text-primary">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Alamat</h4>
+                                <p class="text-gray-600">Jalan Medan Km 4,5, Sumber Jaya, Kec. Siantar Martoba, Kota Pematang Siantar, Sumatera Utara 21137</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-50 p-3 rounded-full text-primary">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Telepon</h4>
+                                <p class="text-gray-600">(0622) XXXXXXX</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-50 p-3 rounded-full text-primary">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Email</h4>
+                                <p class="text-gray-600">info@smpn9pematangsiantar.sch.id</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="bg-gray-200 rounded-lg overflow-hidden shadow-lg h-[400px]">
+                    <!-- Menggunakan link maps yang diberikan user untuk generate embed -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.346894541748!2d99.04369797497063!3d2.992003596984214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303185b3b1853d45%3A0x6331908d13292415!2sUPTD%20SMP%20Negeri%209%20Pematangsiantar!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <h3 class="font-bold text-xl mb-4 text-white">UPTD SMPN 9</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Mewujudkan pendidikan berkualitas yang berlandaskan iman, taqwa, dan nilai-nilai budaya bangsa.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-secondary">Tautan Cepat</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Profil Sekolah</a></li>
+                        <li><a href="#" class="hover:text-white transition">Guru & Staff</a></li>
+                        <li><a href="#" class="hover:text-white transition">Agenda Sekolah</a></li>
+                        <li><a href="#" class="hover:text-white transition">E-Learning</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-secondary">Akademik</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Kalender Akademik</a></li>
+                        <li><a href="#" class="hover:text-white transition">Jadwal Pelajaran</a></li>
+                        <li><a href="#" class="hover:text-white transition">Peraturan Sekolah</a></li>
+                        <li><a href="#" class="hover:text-white transition">Ekstrakurikuler</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-secondary">Ikuti Kami</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-blue-600 transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-pink-600 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-red-600 transition"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 UPTD SMP Negeri 9 Pematangsiantar. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when link is clicked
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
